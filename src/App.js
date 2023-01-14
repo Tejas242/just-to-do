@@ -24,14 +24,6 @@ function App() {
       setTasks(modifiedTasks);
   }
 
-  const sortTaskByColor = (color) => {
-      setTasks(tasks.sort((a, b) => {
-          if(a.color === color) return -1;
-          if(b.color === color) return 1;
-          return 0;
-      }));
-  }
-
   const prioritizeTask = (index) => {
       let modifiedTasks = [...tasks];
       let task = modifiedTasks.splice(index, 1);
